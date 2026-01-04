@@ -145,6 +145,8 @@ The project uses the following built-in C++ libraries:
 
                        <chrono>  for high-resolution execution time measurement
 
+                       <fstream> 	Used for file handling; in particular to generate input and output files as code is executed.
+
 3) Operating System
 
 Compatible with Windows, Linux, and macOS
