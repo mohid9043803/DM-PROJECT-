@@ -1,0 +1,107 @@
+Test Case 1:
+Sorting Algorithm Visualizer
+Enter dataset size (max 1000): 7
+
+Original Array:
+41 67 34 0 69 24 78 
+
+Select Sorting Algorithm:
+1. Bubble Sort
+2. Selection Sort
+3. Insertion Sort
+4. Merge Sort
+5. Quick Sort
+Enter choice : 3
+41 67 34 0 69 24 78 
+34 41 67 0 69 24 78 
+0 34 41 67 69 24 78 
+0 34 41 67 69 24 78 
+0 24 34 41 67 69 78 
+0 24 34 41 67 69 78 
+
+Execution Time: 15530000 ns
+
+Sorted Array:
+0 24 34 41 67 69 78
+
+Test Case 2:
+Sorting Algorithm Visualizer
+Enter dataset size (max 1000): 5
+
+Original Array:
+41 67 34 0 69 
+
+Select Sorting Algorithm:
+1. Bubble Sort
+2. Selection Sort
+3. Insertion Sort
+4. Merge Sort
+5. Quick Sort
+Enter choice : 1
+41 67 34 0 69 
+41 34 67 0 69 
+41 34 0 67 69 
+41 34 0 67 69 
+34 41 0 67 69 
+34 0 41 67 69 
+34 0 41 67 69 
+0 34 41 67 69 
+0 34 41 67 69 
+0 34 41 67 69
+
+Execution Time: 15644000 ns
+
+Sorted Array:
+0 34 41 67 69
+
+Test Case 3:
+Sorting Algorithm Visualizer
+Enter dataset size (max 1000): 10
+
+Original Array:
+41 67 34 0 69 24 78 58 62 64
+
+Select Sorting Algorithm:
+1. Bubble Sort
+2. Selection Sort
+3. Insertion Sort
+4. Merge Sort
+5. Quick Sort
+Enter choice : 5
+41 67 34 0 69 24 78 58 62 64
+41 67 34 0 69 24 78 58 62 64 
+41 34 67 0 69 24 78 58 62 64
+41 34 0 67 69 24 78 58 62 64
+41 34 0 67 69 24 78 58 62 64 
+41 34 0 24 69 67 78 58 62 64
+41 34 0 24 69 67 78 58 62 64
+41 34 0 24 58 67 78 69 62 64
+41 34 0 24 58 62 78 69 67 64 
+41 34 0 24 58 62 64 69 67 78
+41 34 0 24 58 62 64 69 67 78
+41 34 0 24 58 62 64 69 67 78
+41 34 0 24 58 62 64 69 67 78
+41 34 0 24 58 62 64 69 67 78 
+41 34 0 24 58 62 64 69 67 78
+41 34 0 24 58 62 64 69 67 78
+41 34 0 24 58 62 64 69 67 78
+41 34 0 24 58 62 64 69 67 78 
+41 34 0 24 58 62 64 69 67 78
+41 34 0 24 58 62 64 69 67 78
+41 34 0 24 58 62 64 69 67 78 
+41 34 0 24 58 62 64 69 67 78
+41 34 0 24 58 62 64 69 67 78
+0 34 41 24 58 62 64 69 67 78 
+0 24 41 34 58 62 64 69 67 78
+0 24 41 34 58 62 64 69 67 78
+0 24 34 41 58 62 64 69 67 78
+0 24 34 41 58 62 64 69 67 78 
+0 24 34 41 58 62 64 69 67 78
+0 24 34 41 58 62 64 69 67 78
+0 24 34 41 58 62 64 69 67 78
+0 24 34 41 58 62 64 67 69 78
+
+Execution Time: 131293000 ns
+
+Sorted Array:
+0 24 34 41 58 62 64 67 69 78
