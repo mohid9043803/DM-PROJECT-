@@ -1,5 +1,5 @@
 /*
-Project Title : Sorting Algorithm Visualizer
+Project Title : Sort Master ---- Visual Analyzer of Sorting Algorithms
 Course        : Discrete Mathematics
 Authors       : Awais Afzal & Mohid Sadiq
 */
@@ -227,3 +227,4 @@ int main() {
 
     return 0;
 }
+
