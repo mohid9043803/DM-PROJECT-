@@ -7,109 +7,122 @@ Authors       : Awais Afzal & Mohid Sadiq
 #include <iostream>
 #include <cstdlib>
 #include <chrono>
+#include <fstream>   // For file handling
 
 using namespace std;
 using namespace chrono;
 
-int GLOBAL_SIZE;
+/* ========== ANSI COLORS ========== */
+#define RESET   "\033[0m"
+#define RED     "\033[31m"
+#define GREEN   "\033[32m"
+#define YELLOW  "\033[33m"
+#define CYAN    "\033[36m"
+#define BOLD    "\033[1m"
 
-// Manual swap (no algorithm library)
-void swapValues(int &a, int &b)
-{
-    int temp = a;
-    a = b;
-    b = temp;
+/* ================= OPENING PAGE ================= */
+void openingPage() {
+    cout << CYAN << BOLD;
+    cout << "============================================================\n";
+    cout << "        SORTING ALGORITHM VISUALIZER\n";
+    cout << "============================================================\n";
+    cout << GREEN;
+    cout << "Course  : Discrete Mathematics\n";
+    cout << "Authors : Awais Afzal & Mohid Sadiq\n";
+    cout << CYAN;
+    cout << "------------------------------------------------------------\n";
+    cout << YELLOW;
+    cout << "Algorithms Implemented:\n";
+    cout << " - Bubble Sort\n";
+    cout << " - Selection Sort\n";
+    cout << " - Insertion Sort\n";
+    cout << " - Merge Sort\n";
+    cout << " - Quick Sort\n";
+    cout << CYAN;
+    cout << "------------------------------------------------------------\n";
+    cout << GREEN;
+    cout << "Features:\n";
+    cout << " * Step-by-step visualization\n";
+    cout << " * Execution time in nanoseconds\n";
+    cout << " * Random dataset generation\n";
+    cout << CYAN;
+    cout << "============================================================\n";
+    cout << RED << "Press ENTER to continue..." << RESET << endl;
+
+    cin.ignore();
+    cin.get();
 }
 
-// Print full array
-void printArray(int arr[])
-{
-    for (int i = 0; i < GLOBAL_SIZE; i++)
+/* ================= SORTING LOGIC ================= */
+
+void printArray(int arr[], int size) {
+    for (int i = 0; i < size; i++)
         cout << arr[i] << " ";
     cout << endl;
 }
 
-// Bubble Sort
-void bubbleSort(int arr[])
-{
-    for (int i = 0; i < GLOBAL_SIZE - 1; i++)
-        for (int j = 0; j < GLOBAL_SIZE - i - 1; j++)
-        {
+void bubbleSort(int arr[], int size) {
+    cout << CYAN << "\nBubble Sort Visualization:\n" << RESET;
+    for (int i = 0; i < size - 1; i++)
+        for (int j = 0; j < size - i - 1; j++) {
             if (arr[j] > arr[j + 1])
-                swapValues(arr[j], arr[j + 1]);
-            printArray(arr);
+                swap(arr[j], arr[j + 1]);
+            printArray(arr, size);
         }
 }
 
-// Selection Sort
-void selectionSort(int arr[])
-{
-    for (int i = 0; i < GLOBAL_SIZE - 1; i++)
-    {
+void selectionSort(int arr[], int size) {
+    cout << CYAN << "\nSelection Sort Visualization:\n" << RESET;
+    for (int i = 0; i < size - 1; i++) {
         int minIndex = i;
-        for (int j = i + 1; j < GLOBAL_SIZE; j++)
+        for (int j = i + 1; j < size; j++)
             if (arr[j] < arr[minIndex])
                 minIndex = j;
-
-        swapValues(arr[i], arr[minIndex]);
-        printArray(arr);
+        swap(arr[i], arr[minIndex]);
+        printArray(arr, size);
     }
 }
 
-// Insertion Sort
-void insertionSort(int arr[])
-{
-    for (int i = 1; i < GLOBAL_SIZE; i++)
-    {
+void insertionSort(int arr[], int size) {
+    cout << CYAN << "\nInsertion Sort Visualization:\n" << RESET;
+    for (int i = 1; i < size; i++) {
         int key = arr[i];
         int j = i - 1;
-
-        while (j >= 0 && arr[j] > key)
-        {
+        while (j >= 0 && arr[j] > key) {
             arr[j + 1] = arr[j];
             j--;
+            printArray(arr, size);
         }
         arr[j + 1] = key;
-        printArray(arr);
+        printArray(arr, size);
     }
 }
 
-// Merge function
-void merge(int arr[], int l, int m, int r)
-{
-    int n1 = m - l + 1;
-    int n2 = r - m;
-
+void merge(int arr[], int l, int m, int r) {
     int L[1000], R[1000];
+    int n1 = m - l + 1, n2 = r - m;
 
-    for (int i = 0; i < n1; i++)
-        L[i] = arr[l + i];
-    for (int i = 0; i < n2; i++)
-        R[i] = arr[m + 1 + i];
+    for (int i = 0; i < n1; i++) L[i] = arr[l + i];
+    for (int i = 0; i < n2; i++) R[i] = arr[m + 1 + i];
 
     int i = 0, j = 0, k = l;
 
-    while (i < n1 && j < n2)
-    {
-        if (L[i] <= R[j])
-            arr[k++] = L[i++];
-        else
-            arr[k++] = R[j++];
-        printArray(arr);
+    while (i < n1 && j < n2) {
+        arr[k++] = (L[i] <= R[j]) ? L[i++] : R[j++];
+        printArray(arr, r + 1);
     }
-
-    while (i < n1)
+    while (i < n1) {
         arr[k++] = L[i++];
-
-    while (j < n2)
+        printArray(arr, r + 1);
+    }
+    while (j < n2) {
         arr[k++] = R[j++];
+        printArray(arr, r + 1);
+    }
 }
 
-// Merge Sort
-void mergeSort(int arr[], int l, int r)
-{
-    if (l < r)
-    {
+void mergeSort(int arr[], int l, int r) {
+    if (l < r) {
         int m = (l + r) / 2;
         mergeSort(arr, l, m);
         mergeSort(arr, m + 1, r);
@@ -117,93 +130,100 @@ void mergeSort(int arr[], int l, int r)
     }
 }
 
-// Partition for Quick Sort
-int partition(int arr[], int low, int high)
-{
-    int pivot = arr[high];
-    int i = low - 1;
-
-    for (int j = low; j < high; j++)
-    {
+int partition(int arr[], int low, int high) {
+    int pivot = arr[high], i = low - 1;
+    for (int j = low; j < high; j++) {
         if (arr[j] < pivot)
-            swapValues(arr[++i], arr[j]);
-        printArray(arr);
+            swap(arr[++i], arr[j]);
+        printArray(arr, high + 1);
     }
-
-    swapValues(arr[i + 1], arr[high]);
-    printArray(arr);
+    swap(arr[i + 1], arr[high]);
+    printArray(arr, high + 1);
     return i + 1;
 }
 
-// Quick Sort
-void quickSort(int arr[], int low, int high)
-{
-    if (low < high)
-    {
+void quickSort(int arr[], int low, int high) {
+    if (low < high) {
         int pi = partition(arr, low, high);
         quickSort(arr, low, pi - 1);
         quickSort(arr, pi + 1, high);
     }
 }
 
-// Random data generation
-void generateRandomData(int arr[])
-{
-    for (int i = 0; i < GLOBAL_SIZE; i++)
+void generateRandomData(int arr[], int size) {
+    for (int i = 0; i < size; i++)
         arr[i] = rand() % 100;
 }
 
-// Main
-int main()
-{
-    cout << "Sorting Algorithm Visualizer\n";
-    cout << "Enter dataset size (max 1000): ";
-    cin >> GLOBAL_SIZE;
+/* ================= MAIN ================= */
 
-    if (GLOBAL_SIZE <= 0 || GLOBAL_SIZE > 1000)
-    {
-        cout << "Invalid size.\n";
+int main() {
+    openingPage();
+
+    int size;
+    cout << YELLOW << "Enter dataset size (max 1000): " << RESET;
+    cin >> size;
+
+    if (size <= 0 || size > 1000) {
+        cout << RED << "Invalid size.\n" << RESET;
         return 0;
     }
 
     int data[1000];
-    generateRandomData(data);
+    generateRandomData(data, size);
 
-    cout << "\nOriginal Array:\n";
-    printArray(data);
+    // Write input file
+    ofstream inputFile("input.txt");
+    inputFile << size << "\n";
+    for (int i = 0; i < size; i++)
+        inputFile << data[i] << " ";
+    inputFile.close();
 
-    cout << "\nSelect Sorting Algorithm:\n";
-    cout << "1. Bubble Sort\n2. Selection Sort\n3. Insertion Sort\n";
-    cout << "4. Merge Sort\n5. Quick Sort\n";
+    // Print original list
+    cout << CYAN << "\nOriginal (Unsorted) List:\n" << RESET;
+    printArray(data, size);
+
+    // Menu
+    cout << CYAN << "\nChoose Sorting Algorithm:\n" << RESET;
+    cout << "1. Bubble Sort\n";
+    cout << "2. Selection Sort\n";
+    cout << "3. Insertion Sort\n";
+    cout << "4. Merge Sort\n";
+    cout << "5. Quick Sort\n";
     cout << "Enter choice : ";
+
     int choice;
     cin >> choice;
 
-    int temp[1000];
-    for (int i = 0; i < GLOBAL_SIZE; i++)
-        temp[i] = data[i];
-
     auto start = high_resolution_clock::now();
 
-    switch (choice)
-    {
-        case 1: bubbleSort(temp); break;
-        case 2: selectionSort(temp); break;
-        case 3: insertionSort(temp); break;
-        case 4: mergeSort(temp, 0, GLOBAL_SIZE - 1); break;
-        case 5: quickSort(temp, 0, GLOBAL_SIZE - 1); break;
+    switch (choice) {
+        case 1: bubbleSort(data, size); break;
+        case 2: selectionSort(data, size); break;
+        case 3: insertionSort(data, size); break;
+        case 4: mergeSort(data, 0, size - 1); break;
+        case 5: quickSort(data, 0, size - 1); break;
         default:
-            cout << "Invalid choice.\n";
+            cout << RED << "Invalid choice.\n" << RESET;
             return 0;
     }
 
     auto end = high_resolution_clock::now();
-    cout << "\nExecution Time: "
-         << duration_cast<nanoseconds>(end - start).count()
-         << " ns\n";
+    auto duration = duration_cast<nanoseconds>(end - start);
 
-    cout << "\nSorted Array:\n";
-    printArray(temp);
+    // Print final sorted list
+    cout << GREEN << "\nSorted List:\n" << RESET;
+    printArray(data, size);
+
+    // Write output file
+    ofstream outputFile("output.txt");
+    outputFile << size << "\n";
+    for (int i = 0; i < size; i++)
+        outputFile << data[i] << " ";
+    outputFile.close();
+
+    cout << GREEN << "\nExecution Time: " << duration.count() << " ns\n";
+    cout << "Sorting Completed Successfully!\n" << RESET;
 
     return 0;
 }
