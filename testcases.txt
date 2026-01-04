@@ -1,107 +1,188 @@
 Test Case 1:
-Sorting Algorithm Visualizer
+============================================================
+        SORTING ALGORITHM VISUALIZER
+============================================================
+Course  : Discrete Mathematics
+Authors : Awais Afzal & Mohid Sadiq
+------------------------------------------------------------
+Algorithms Implemented:
+ - Bubble Sort
+ - Selection Sort
+ - Insertion Sort
+ - Merge Sort
+ - Quick Sort
+------------------------------------------------------------
+Features:
+ * Step-by-step visualization
+ * Execution time in nanoseconds
+ * Random dataset generation
+============================================================
+Press ENTER to continue...
+
+
 Enter dataset size (max 1000): 7
 
-Original Array:
+Original (Unsorted) List:
 41 67 34 0 69 24 78 
 
-Select Sorting Algorithm:
-1. Bubble Sort
-2. Selection Sort
-3. Insertion Sort
-4. Merge Sort
-5. Quick Sort
-Enter choice : 3
-41 67 34 0 69 24 78 
-34 41 67 0 69 24 78 
-0 34 41 67 69 24 78 
-0 34 41 67 69 24 78 
-0 24 34 41 67 69 78 
-0 24 34 41 67 69 78 
-
-Execution Time: 15530000 ns
-
-Sorted Array:
-0 24 34 41 67 69 78
-
-Test Case 2:
-Sorting Algorithm Visualizer
-Enter dataset size (max 1000): 5
-
-Original Array:
-41 67 34 0 69 
-
-Select Sorting Algorithm:
+Choose Sorting Algorithm:
 1. Bubble Sort
 2. Selection Sort
 3. Insertion Sort
 4. Merge Sort
 5. Quick Sort
 Enter choice : 1
-41 67 34 0 69 
-41 34 67 0 69 
-41 34 0 67 69 
-41 34 0 67 69 
-34 41 0 67 69 
-34 0 41 67 69 
-34 0 41 67 69 
-0 34 41 67 69 
-0 34 41 67 69 
-0 34 41 67 69
 
-Execution Time: 15644000 ns
+Bubble Sort Visualization:
+41 67 34 0 69 24 78
+41 34 67 0 69 24 78
+41 34 0 67 69 24 78
+41 34 0 67 69 24 78
+41 34 0 67 24 69 78
+41 34 0 67 24 69 78
+34 41 0 67 24 69 78
+34 0 41 67 24 69 78
+34 0 41 67 24 69 78
+34 0 41 24 67 69 78
+34 0 41 24 67 69 78
+0 34 41 24 67 69 78
+0 34 41 24 67 69 78
+0 34 24 41 67 69 78
+0 34 24 41 67 69 78
+0 34 24 41 67 69 78
+0 24 34 41 67 69 78
+0 24 34 41 67 69 78
+0 24 34 41 67 69 78
+0 24 34 41 67 69 78
+0 24 34 41 67 69 78
 
-Sorted Array:
-0 34 41 67 69
+Sorted List:
+0 24 34 41 67 69 78
+
+Execution Time: 14166000 ns
+Sorting Completed Successfully!
+
+
+
+Test Case 2:
+============================================================
+        SORTING ALGORITHM VISUALIZER
+============================================================
+Course  : Discrete Mathematics
+Authors : Awais Afzal & Mohid Sadiq
+------------------------------------------------------------
+Algorithms Implemented:
+ - Bubble Sort
+ - Selection Sort
+ - Insertion Sort
+ - Merge Sort
+ - Quick Sort
+------------------------------------------------------------
+Features:
+ * Step-by-step visualization
+ * Execution time in nanoseconds
+ * Random dataset generation
+============================================================
+Press ENTER to continue...
+
+
+Enter dataset size (max 1000): 7
+
+Original (Unsorted) List:
+41 67 34 0 69 24 78
+
+Choose Sorting Algorithm:
+1. Bubble Sort
+2. Selection Sort
+3. Insertion Sort
+4. Merge Sort
+5. Quick Sort
+Enter choice : 4
+41 67
+41 67
+41 67 0 0
+41 67 0 34
+0 67 0 34
+0 34 0 34
+0 34 41 34
+0 34 41 67
+0 34 41 67 24 24
+0 34 41 67 24 69
+0 34 41 67 24 69 78 
+0 34 41 67 24 69 78
+0 34 41 67 24 69 78
+0 34 41 67 24 69 78
+0 24 41 67 24 69 78
+0 24 34 67 24 69 78
+0 24 34 41 24 69 78
+0 24 34 41 67 69 78
+0 24 34 41 67 69 78
+0 24 34 41 67 69 78
+
+Sorted List:
+0 24 34 41 67 69 78
+
+Execution Time: 16683000 ns
+Sorting Completed Successfully!
+
+
 
 Test Case 3:
-Sorting Algorithm Visualizer
-Enter dataset size (max 1000): 10
+============================================================
+        SORTING ALGORITHM VISUALIZER
+============================================================
+Course  : Discrete Mathematics
+Authors : Awais Afzal & Mohid Sadiq
+------------------------------------------------------------
+Algorithms Implemented:
+ - Bubble Sort
+ - Selection Sort
+ - Insertion Sort
+ - Merge Sort
+ - Quick Sort
+------------------------------------------------------------
+Features:
+ * Step-by-step visualization
+ * Execution time in nanoseconds
+ * Random dataset generation
+============================================================
+Press ENTER to continue...
 
-Original Array:
-41 67 34 0 69 24 78 58 62 64
 
-Select Sorting Algorithm:
+Enter dataset size (max 1000): 7
+
+Original (Unsorted) List:
+41 67 34 0 69 24 78
+
+Choose Sorting Algorithm:
 1. Bubble Sort
 2. Selection Sort
 3. Insertion Sort
 4. Merge Sort
 5. Quick Sort
 Enter choice : 5
-41 67 34 0 69 24 78 58 62 64
-41 67 34 0 69 24 78 58 62 64 
-41 34 67 0 69 24 78 58 62 64
-41 34 0 67 69 24 78 58 62 64
-41 34 0 67 69 24 78 58 62 64 
-41 34 0 24 69 67 78 58 62 64
-41 34 0 24 69 67 78 58 62 64
-41 34 0 24 58 67 78 69 62 64
-41 34 0 24 58 62 78 69 67 64 
-41 34 0 24 58 62 64 69 67 78
-41 34 0 24 58 62 64 69 67 78
-41 34 0 24 58 62 64 69 67 78
-41 34 0 24 58 62 64 69 67 78
-41 34 0 24 58 62 64 69 67 78 
-41 34 0 24 58 62 64 69 67 78
-41 34 0 24 58 62 64 69 67 78
-41 34 0 24 58 62 64 69 67 78
-41 34 0 24 58 62 64 69 67 78 
-41 34 0 24 58 62 64 69 67 78
-41 34 0 24 58 62 64 69 67 78
-41 34 0 24 58 62 64 69 67 78 
-41 34 0 24 58 62 64 69 67 78
-41 34 0 24 58 62 64 69 67 78
-0 34 41 24 58 62 64 69 67 78 
-0 24 41 34 58 62 64 69 67 78
-0 24 41 34 58 62 64 69 67 78
-0 24 34 41 58 62 64 69 67 78
-0 24 34 41 58 62 64 69 67 78 
-0 24 34 41 58 62 64 69 67 78
-0 24 34 41 58 62 64 69 67 78
-0 24 34 41 58 62 64 69 67 78
-0 24 34 41 58 62 64 67 69 78
+41 67 34 0 69 24 78
+41 67 34 0 69 24 78
+41 67 34 0 69 24 78
+41 67 34 0 69 24 78
+41 67 34 0 69 24 78
+41 67 34 0 69 24 78
+41 67 34 0 69 24 78
+41 67 34 0 69 24
+41 67 34 0 69 24
+41 67 34 0 69 24
+0 67 34 41 69 24
+0 67 34 41 69 24
+0 24 34 41 69 67
+0 24 34 41 69 67
+0 24 34 41 69 67
+0 24 34 41 69 67
+0 24 34 41 67 69
+0 24 34 41
+0 24 34 41
 
-Execution Time: 131293000 ns
+Sorted List:
+0 24 34 41 67 69 78
 
-Sorted Array:
-0 24 34 41 58 62 64 67 69 78
+Execution Time: 13465000 ns
+Sorting Completed Successfully!
