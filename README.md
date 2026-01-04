@@ -16,6 +16,7 @@ Installation Instructions:
 Follow the steps below to compile and run the Sorting Algorithm Visualizer on your system:
 
 1) Install a C++ Compiler
+
 Ensure that a C++ compiler supporting modern C++ standards is installed.
 
 Recommended: GCC (g++), Clang, or MSVC
@@ -37,17 +38,22 @@ Visual Studio Code
 3) Download the Source Code
 
 Clone the GitHub repository or download the .cpp file directly.
+
 git clone <https://github.com/mohid9043803/DM-PROJECT->
 
 4) Compile the Program
+
 Navigate to the project directory and compile using:
+
 g++ code.cpp -o code
 
-5) Run the Program
+6) Run the Program
+   
 Execute the compiled file:
+
 ./code
 
-6) Input Requirements
+7) Input Requirements
 
 Enter a dataset size between 1 and 1000 when prompted.
 Select a sorting algorithm from the menu to begin visualization.
@@ -130,19 +136,18 @@ The Sorting Algorithm Visualizer has minimal dependencies and relies primarily o
 1) C++ Compiler : g++
 
 2) Standard C++ Libraries
+   
 The project uses the following built-in C++ libraries:
 
-<iostream> – for input and output operations
+                      <iostream> for input and output operations
 
-<cstdlib> – for random number generation using rand()
+                       <cstdlib> for random number generation using rand()
 
-<chrono> – for high-resolution execution time measurement
+                       <chrono>  for high-resolution execution time measurement
 
 3) Operating System
 
 Compatible with Windows, Linux, and macOS
-
-No OS-specific libraries are used
 
 4) Development Environment (Optional):
 
