@@ -71,75 +71,130 @@ User Interface:
 
 
 ============================================================
+
         SORTING ALGORITHM VISUALIZER
+        
 ============================================================
+
 Course  : Discrete Mathematics
+
 Authors : Awais Afzal & Mohid Sadiq
+
 ------------------------------------------------------------
+
 Algorithms Implemented:
+
  - Bubble Sort
+   
  - Selection Sort
+
  - Insertion Sort
+   
  - Merge Sort
+   
  - Quick Sort
+   
 ------------------------------------------------------------
+
 Features:
+
  * Step-by-step visualization
+   
  * Execution time in nanoseconds
+   
  * Random dataset generation
+   
 ============================================================
+
 Press ENTER to continue...
 
 
 Enter dataset size (max 1000): 8
 
 Original (Unsorted) List:
+
 41 67 34 0 69 24 78 58 
 
 Choose Sorting Algorithm:
+
 1. Bubble Sort
+   
 2. Selection Sort
+   
 3. Insertion Sort
+
 4. Merge Sort
+
 5. Quick Sort
+
 Enter choice : 1
 
 Program Output :
 
 Bubble Sort Visualization:
+
 41 67 34 0 69 24 78 58
+
 41 34 67 0 69 24 78 58 
+
 41 34 0 67 69 24 78 58
+
 41 34 0 67 69 24 78 58
+
 41 34 0 67 24 69 78 58
+
 41 34 0 67 24 69 78 58 
+
 41 34 0 67 24 69 58 78
+
 34 41 0 67 24 69 58 78
+
 34 0 41 67 24 69 58 78
+
 34 0 41 67 24 69 58 78
+
 34 0 41 24 67 69 58 78 
+
 34 0 41 24 67 69 58 78
+
 34 0 41 24 67 58 69 78
+
 0 34 41 24 67 58 69 78
+
 0 34 41 24 67 58 69 78
+
 0 34 24 41 67 58 69 78
+
 0 34 24 41 67 58 69 78 
+
 0 34 24 41 58 67 69 78
+
 0 34 24 41 58 67 69 78
+
 0 24 34 41 58 67 69 78
+
 0 24 34 41 58 67 69 78
+
 0 24 34 41 58 67 69 78
+
 0 24 34 41 58 67 69 78 
+
 0 24 34 41 58 67 69 78
+
 0 24 34 41 58 67 69 78
+
 0 24 34 41 58 67 69 78
+
 0 24 34 41 58 67 69 78
+
 0 24 34 41 58 67 69 78 
 
 Sorted List:
+
 0 24 34 41 58 67 69 78
 
 Execution Time: 92745000 ns
+
 Sorting Completed Successfully!
 
 Example 2: Using Merge Sort for Efficient Sorting
@@ -157,34 +212,59 @@ Select Sorting Algorithm: 4
 Program Output :
 
 41 67
+
 41 67
+
 41 67 0 0
+
 41 67 0 34
+
 0 67 0 34
+
 0 34 0 34
+
 0 34 41 34
+
 0 34 41 67
+
 0 34 41 67 24 24
+
 0 34 41 67 24 69
+
 0 34 41 67 24 69 58 58
+
 0 34 41 67 24 69 58 78 
+
 0 34 41 67 24 69 58 78
+
 0 34 41 67 24 58 58 78
+
 0 34 41 67 24 58 69 78
+
 0 34 41 67 24 58 69 78 
+
 0 34 41 67 24 58 69 78
+
 0 24 41 67 24 58 69 78 
+
 0 24 34 67 24 58 69 78
+
 0 24 34 41 24 58 69 78 
+
 0 24 34 41 58 58 69 78
+
 0 24 34 41 58 67 69 78
+
 0 24 34 41 58 67 69 78
+
 0 24 34 41 58 67 69 78
 
 Sorted List:
+
 0 24 34 41 58 67 69 78 
 
 Execution Time: 125174000 ns
+
 Sorting Completed Successfully!
 
 Example 3: Invalid Input Handling
@@ -208,13 +288,13 @@ The Sorting Algorithm Visualizer has minimal dependencies and relies primarily o
    
 The project uses the following built-in C++ libraries:
 
-                      <iostream> for input and output operations
+               <iostream> for input and output operations
 
-                       <cstdlib> for random number generation using rand()
+              <cstdlib> for random number generation using rand()
 
-                       <chrono>  for high-resolution execution time measurement
+                <chrono>  for high-resolution execution time measurement
 
-                       <fstream> 	Used for file handling; in particular to generate input and output files as code is executed.
+               <fstream> 	Used for file handling; in particular to generate input and output files as code is executed.
 
 3) Operating System
 
