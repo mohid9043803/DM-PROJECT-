@@ -288,13 +288,13 @@ The Sorting Algorithm Visualizer has minimal dependencies and relies primarily o
    
 The project uses the following built-in C++ libraries:
 
-               <iostream> for input and output operations
+          <iostream> for input and output operations
 
-              <cstdlib> for random number generation using rand()
+          <cstdlib> for random number generation using rand()
 
-                <chrono>  for high-resolution execution time measurement
+          <chrono>  for high-resolution execution time measurement
 
-               <fstream> 	Used for file handling; in particular to generate input and output files as code is executed.
+        <fstream> 	Used for file handling; in particular to generate input and output files as code is executed.
 
 3) Operating System
 
