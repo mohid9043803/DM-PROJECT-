@@ -65,40 +65,88 @@ Below are example scenarios demonstrating how to use the Sorting Algorithm Visua
 
 Example 1: Visualizing Bubble Sort
 
-User Input:
 
-Enter dataset size (max 1000): 5
 
 User Interface:
 
 
-Select Sorting Algorithm:
+============================================================
+        SORTING ALGORITHM VISUALIZER
+============================================================
+Course  : Discrete Mathematics
+Authors : Awais Afzal & Mohid Sadiq
+------------------------------------------------------------
+Algorithms Implemented:
+ - Bubble Sort
+ - Selection Sort
+ - Insertion Sort
+ - Merge Sort
+ - Quick Sort
+------------------------------------------------------------
+Features:
+ * Step-by-step visualization
+ * Execution time in nanoseconds
+ * Random dataset generation
+============================================================
+Press ENTER to continue...
+
+
+Enter dataset size (max 1000): 8
+
+Original (Unsorted) List:
+41 67 34 0 69 24 78 58 
+
+Choose Sorting Algorithm:
 1. Bubble Sort
 2. Selection Sort
 3. Insertion Sort
 4. Merge Sort
 5. Quick Sort
-
-
 Enter choice : 1
 
 Program Output :
 
-34 12 78 9 56
+Bubble Sort Visualization:
+41 67 34 0 69 24 78 58
+41 34 67 0 69 24 78 58 
+41 34 0 67 69 24 78 58
+41 34 0 67 69 24 78 58
+41 34 0 67 24 69 78 58
+41 34 0 67 24 69 78 58 
+41 34 0 67 24 69 58 78
+34 41 0 67 24 69 58 78
+34 0 41 67 24 69 58 78
+34 0 41 67 24 69 58 78
+34 0 41 24 67 69 58 78 
+34 0 41 24 67 69 58 78
+34 0 41 24 67 58 69 78
+0 34 41 24 67 58 69 78
+0 34 41 24 67 58 69 78
+0 34 24 41 67 58 69 78
+0 34 24 41 67 58 69 78 
+0 34 24 41 58 67 69 78
+0 34 24 41 58 67 69 78
+0 24 34 41 58 67 69 78
+0 24 34 41 58 67 69 78
+0 24 34 41 58 67 69 78
+0 24 34 41 58 67 69 78 
+0 24 34 41 58 67 69 78
+0 24 34 41 58 67 69 78
+0 24 34 41 58 67 69 78
+0 24 34 41 58 67 69 78
+0 24 34 41 58 67 69 78 
 
-12 34 78 9 56
+Sorted List:
+0 24 34 41 58 67 69 78
 
-12 34 9 78 56
-
-12 34 9 56 78
-
-Execution Time: 48200 ns
-
-Sorting Completed Successfully.
+Execution Time: 92745000 ns
+Sorting Completed Successfully!
 
 Example 2: Using Merge Sort for Efficient Sorting
 
 User Input:
+
+Press ENTER to continue...
 
 Enter dataset size (max 1000): 8
 
@@ -108,15 +156,36 @@ Select Sorting Algorithm: 4
 
 Program Output :
 
-45 22 11 89 67 34 5 90
+41 67
+41 67
+41 67 0 0
+41 67 0 34
+0 67 0 34
+0 34 0 34
+0 34 41 34
+0 34 41 67
+0 34 41 67 24 24
+0 34 41 67 24 69
+0 34 41 67 24 69 58 58
+0 34 41 67 24 69 58 78 
+0 34 41 67 24 69 58 78
+0 34 41 67 24 58 58 78
+0 34 41 67 24 58 69 78
+0 34 41 67 24 58 69 78 
+0 34 41 67 24 58 69 78
+0 24 41 67 24 58 69 78 
+0 24 34 67 24 58 69 78
+0 24 34 41 24 58 69 78 
+0 24 34 41 58 58 69 78
+0 24 34 41 58 67 69 78
+0 24 34 41 58 67 69 78
+0 24 34 41 58 67 69 78
 
-11 22 45 89
+Sorted List:
+0 24 34 41 58 67 69 78 
 
-5 34 67 90
-
-11 22 34 45 67 89 90
-
-Execution Time: 19300 ns
+Execution Time: 125174000 ns
+Sorting Completed Successfully!
 
 Example 3: Invalid Input Handling
 
